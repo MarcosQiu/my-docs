@@ -1,7 +1,18 @@
 site_name: Take Notes With Me
 site_url: http://yankunqiu.me
+repo_url: https://github.com/MarcosQiu/my-docs
+repo_name: MarcosQiu/my-docs
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github-alt
+  plugins:
+  - search:
+      lang:
+        - en
+  features:
+    - navigation.top
+    - search.suggest
   palette:
     - scheme: default
       toggle:
@@ -12,3 +23,9 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+generator: false
+copyright: Copyright &copy; 2021 Yankun Qiu
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:hola@yankunqiu.me

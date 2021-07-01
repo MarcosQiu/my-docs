@@ -1,8 +1,9 @@
-name: Sync to s3
+name: sync
 on:
   push:
     branches: 
       - master
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest

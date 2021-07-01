@@ -1,4 +1,14 @@
-site_name: My Docs
+site_name: Take Notes With Me
 site_url: http://yankunqiu.me
 theme:
   name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode

@@ -4,6 +4,8 @@ repo_url: https://github.com/MarcosQiu/my-docs
 repo_name: MarcosQiu/my-docs
 theme:
   name: material
+  favicon: images/critical-thinking.gif
+  logo: images/brain.png
   icon:
     repo: fontawesome/brands/github-alt
   plugins:
@@ -26,6 +28,11 @@ theme:
 generator: false
 copyright: Copyright &copy; 2021 Yankun Qiu
 extra:
+  disqus: mydocs-2
   social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/yankunqiu/
+    - icon: fontawesome/brands/github
+      link: https://github.com/MarcosQiu
     - icon: fontawesome/solid/paper-plane
       link: mailto:hola@yankunqiu.me

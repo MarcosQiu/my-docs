@@ -1,4 +1,4 @@
-# Review Questions
+## Review Questions
 
 > 1. What are the modules of C++ programs called?
 
@@ -66,7 +66,7 @@ The issue is caused because we don't specify the namespace where `cout` is defin
 2. add `using std::cout;`
 3. change it to `std::cout << "Please enter your PIN: ";`
 
-# Coding Exercise
+## Coding Exercise
 
 ### 2.1
 

@@ -76,6 +76,29 @@ We mainly focus on server-side encryption.
  - Users send object and key to s3 endpoint, on the server side, object is encrypted and a hash of the key is generated, then, the server writes the key hash and cyphertext to the storage, and discard the key.
  - When fetch object, users provide the key to decrypt objects they want to fetch, the server will generate the hash and compare with the key hash stored in storage.
 
+### SSE-S3
+
+ - S3 endpoints handles encryption/decryption processes and key management, so there is no admin overhead.
+ - For each object, s3 generates an unqie key to encrypt the object, and encrypts the key with a master key, the encrypted object & key pair is kept in storage.
+ - It's not suitable if: 
+    1. you need to control & get access to keys 
+    2. you need to take control of key rotation 
+    3. you need role separation (different roles have different set of permissions)
+
+### SSE-KMS
+
+ - Different from SSE-S3, an AWS managed CMK is generated in KMS to encrypt the keys.
+ - S3 is provided with a pair of DEKs, a plaintext and an encrypted versions, to encrypt the object.
+ - Instead of using AMS managed CMK, can also use customer CMK.
+ - It gives control ono the key management & key rotation.
+ - It makes role separation possible (S3 admin that has no access to KMS cannot see the content of the objects in S3).
+
+### Bucket Default Encryption
+
+When uploading, can hae the header `x-amz-server-side-encryption` in request, to specify the encryption type, e.g.
+
+ - `AMS256` -> `SSE-S3`
+ - `aws:kms` -> `SSE-KMS`
 
 ## S3 Object Storage Class
 ## S3 Lifecycle Configuration

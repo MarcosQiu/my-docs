@@ -12,7 +12,7 @@ It links the source code and head file `iostream`. the contents of the head file
 
 > What does the following statement do?
 
-> using namespace std;
+> `using namespace std;`
 
 It makes the definitions in std namespace available to the program.
 
@@ -50,7 +50,9 @@ cout << "We have " << cheeses << " varieties of cheese,";
 > What do the function prototypes tell us about the functions?
 
 > `int froop(double t);`
+
 > `void rattle(int n);`
+
 > `int prune(void)`
 
 1. `int froop(double t);`, the return type is `int`, function name is `froop`, it accepts one argument of type `double`.

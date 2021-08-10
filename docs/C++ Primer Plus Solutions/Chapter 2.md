@@ -1,51 +1,54 @@
 ## Review Questions
 
-> 1. What are the modules of C++ programs called?
+> What are the modules of C++ programs called?
 
 Functions
 
-> 2. What does the following preprocessor directive do?
+> What does the following preprocessor directive do?
+
 > `#include <iostream>`
 
 It links the source code and head file `iostream`. the contents of the head file will be added to the source code before compilation.
 
-> 3. What does the following statement do?
+> What does the following statement do?
+
 > using namespace std;
 
 It makes the definitions in std namespace available to the program.
 
-> 4. What statement would you use to print the phrase “Hello, world” and then start a new line?
+> What statement would you use to print the phrase “Hello, world” and then start a new line?
 
 ```cpp
 using namespace std;
 cout << "Hello, world" << endl; 
 ```
 
-> 5. What statement would you use to create an integer variable with the name cheeses?
+> What statement would you use to create an integer variable with the name cheeses?
 
 ```cpp
 int cheeses;
 ```
 
-> 6. What statement would you use to assign the value 32 to the variable cheeses?
+> What statement would you use to assign the value 32 to the variable cheeses?
 
 ```cpp
 cheeses = 32;
 ```
 
-> 7. What statement would you use to assign the value read from keyboard to the variable cheeses?
+> What statement would you use to assign the value read from keyboard to the variable cheeses?
 
 ```cpp
 cin >> cheeses;
 ```
 
-> 8. What statement would you use to print "We have X varieties of cheese,", where X is the value of the variable cheeses?
+> What statement would you use to print "We have X varieties of cheese,", where X is the value of the variable cheeses?
 
 ```cpp
 cout << "We have " << cheeses << " varieties of cheese,";
 ```
 
-> 9. What do the function prototypes tell us about the functions?
+> What do the function prototypes tell us about the functions?
+
 > `int froop(double t);`
 > `void rattle(int n);`
 > `int prune(void)`
@@ -54,12 +57,12 @@ cout << "We have " << cheeses << " varieties of cheese,";
 2. `void rattle(int n);`, the function has no return value, function name is `rattle`, it accepts one argument of type `int`.
 3. `int prune(void)`, the return type is `int`, function name is `prune`, it doesn't take any arguments.
 
-> 10. When is return not needed when you defining a function?
+> When is return not needed when you defining a function?
 
 1. When the function has no return value.
 2. When you are writing `main` function and want to return `0`.
 
-> 11. When you are writing `main` function, it has the statement `cout << "Please enter your PIN: ";`. The compiler says `cout` is an undeclared identifier. What is the cause of the issue? How can it be solved?
+> When you are writing `main` function, it has the statement `cout << "Please enter your PIN: ";`. The compiler says `cout` is an undeclared identifier. What is the cause of the issue? How can it be solved?
 
 The issue is caused because we don't specify the namespace where `cout` is defined. To solve the issue, we could,
 1. add `using namespace std;`

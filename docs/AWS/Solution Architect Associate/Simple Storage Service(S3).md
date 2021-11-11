@@ -2,6 +2,30 @@
 ## S3 Static Hosting
 ## Object Versioning & MFA Delete
 ## S3 Performance Optimization
+
+#### Upload objects with single PUT request
+
+ - Single data stream to S3
+ - If the stream fails, the upload fails and requires full restart
+ - Speed & reliability is limited because there is only one stream
+ - Maximum object size of 5GB
+
+#### Upload objects with multiple PUT requests
+
+ - Objects are broken up into smaller pieces
+ - Minimum object size of 100MB to be able to turn on this feature
+ - The object can be split into a maximum of 10000 pieces, for each piece, it can range in size between 5MB and 5GB
+ - The last piece can be less than 5MB
+ - The whole upload can partially fail, just need to restart for that part
+ - Transfer rate equals to the sum of the speed of all parts
+
+### S3 accelerated transfer
+
+S3 is public regional service, **using the public Internet for data transfer is never an optimal solution**. To improve the performance, we can use the network of AWS edge locations. Data get transferred to the edge locations first, and then send to the bucket via AWS network. This feature is off by default, to turn it on,
+
+ 1. bucket name cannot contain periods,
+ 2. it needs to be DNS compatiable in its naming.
+
 ## Encryption
 ### Encryption Approaches
 

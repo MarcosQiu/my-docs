@@ -1,5 +1,25 @@
 ## S3 Security (Resource Policies & ACLs)
+
+
+
 ## S3 Static Hosting
+
+ - Normal access is via AWS APIs.
+ - This feature allows access via HTTP.
+ - Index and error documents are set (HTML file).
+ - Website endpoint is created.
+ - Custom domain via Route53, bucket name matters.
+
+### Usage
+
+ - Offloading: put static media in S3.
+ - Out-of-band pages: have a static page to show some maintenance info.
+
+### Pricing
+
+ - Data storage, per GB per month.
+ - Data transfer fee.
+ - Certain costs per 1000 operations.
 
 
 ## Object Versioning & MFA Delete

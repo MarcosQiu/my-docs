@@ -1,6 +1,36 @@
 ## S3 Security (Resource Policies & ACLs)
 ## S3 Static Hosting
+
+
 ## Object Versioning & MFA Delete
+
+Versioning lets you store multiple versions of objects within a bucket. Operations which would modified objects generate a new version.
+
+### Enable/Disable/Suspend Versioning
+
+ - Versioning is on bucket level, it's turned off by default.
+ - Once versioning is turned on, it can't be turned off.
+ - After the versioning is turned on, you can suspend the versioning and turn it back to enabled later.
+
+### Without Versioning
+
+Objects are identified by key (name), their id are set to null.
+
+### With Versioning
+
+Ids are allocated to objects. When retrieving, latest version are returned by default. But can get specific version individually as well.
+
+When delete without giving version id, it just creates a new special version (delete marker) on top.
+
+To actually remove a version, you just specify the version id that you want to remove.
+
+### MFA Delete
+
+ - Enabled in versioning configuration.
+ - MFA is required to change bucket versioning state.
+ - MFA is required to delete versions.
+ - Serial number (MFA) + Code passed with API calls.
+
 ## S3 Performance Optimization
 
 #### Upload objects with single PUT request
